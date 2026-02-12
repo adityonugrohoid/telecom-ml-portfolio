@@ -13,10 +13,10 @@
 | # | Project | ML Type | Algorithm | Target | Result |
 |:---:|:---|:---|:---|:---|:---|
 | 1 | [Churn Prediction](https://github.com/adityonugrohoid/telecom-churn-prediction) | Binary Classification | XGBoost | `is_churned` | AUROC: 0.86 |
-| 2 | [Root Cause Analysis](https://github.com/adityonugrohoid/telecom-root-cause-analysis) | Multi-class Classification | XGBoost | `is_root_cause` | Acc@3: 1.00 |
+| 2 | [Root Cause Analysis](https://github.com/adityonugrohoid/telecom-root-cause-analysis) | Multi-class Classification | XGBoost | `is_root_cause` | Acc@1: 0.91 |
 | 3 | [Anomaly Detection](https://github.com/adityonugrohoid/telecom-anomaly-detection) | Unsupervised | Isolation Forest | `label_anomaly` | F1: 0.70 |
-| 4 | [QoE Prediction](https://github.com/adityonugrohoid/telecom-qoe-prediction) | Regression | LightGBM | `mos_score` | RMSE: 0.04 |
-| 5 | [Capacity Forecasting](https://github.com/adityonugrohoid/telecom-capacity-forecasting) | Time-Series | LightGBM+Prophet | `traffic_load_gb` | MAPE: 1.6% |
+| 4 | [QoE Prediction](https://github.com/adityonugrohoid/telecom-qoe-prediction) | Regression | LightGBM | `mos_score` | RMSE: 0.45 |
+| 5 | [Capacity Forecasting](https://github.com/adityonugrohoid/telecom-capacity-forecasting) | Time-Series | LightGBM+Prophet | `traffic_load_gb` | MAPE: 14.5% |
 | 6 | [Network Optimization](https://github.com/adityonugrohoid/telecom-network-optimization) | Reinforcement Learning | Q-Learning | KPI improvement | +61% vs random |
 
 ---
