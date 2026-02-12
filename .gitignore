@@ -1,0 +1,7 @@
+# Individual project repos (each has its own git remote)
+01-churn-prediction/
+02-root-cause-analysis/
+03-anomaly-detection/
+04-qoe-prediction/
+05-capacity-forecasting/
+06-network-optimization/
