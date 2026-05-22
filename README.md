@@ -1,12 +1,36 @@
+<div align="center">
+
 # Telecom AI/ML Portfolio
 
-> **Portfolio Project**: Demonstrating AI/ML application to real-world telecom challenges using domain expertise from 10+ years in network operations.
-
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![uv](https://img.shields.io/badge/managed%20by-uv-blue)](https://github.com/astral-sh/uv)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**Six end-to-end ML projects covering churn, anomaly detection, QoE, forecasting, and network optimization in telecom**
+
+[Projects](#projects) | [Related Projects](#related-projects)
+
+</div>
 
 ---
+
+## Table of Contents
+
+- [The Problem](#the-problem)
+- [Projects](#projects)
+- [Project Structure](#project-structure)
+- [Related Projects](#related-projects)
+- [License](#license)
+- [Author](#author)
+
+## The Problem
+
+### Telecom Operations at Scale
+
+Network operations teams generate continuous streams of KPI data across thousands of cell sites, but most ML demonstrations treat telecom as interchangeable with generic tabular data. Reproducing realistic behavior (temporal correlation, spatial clustering, equipment failure signatures) requires domain-specific data generation, not public datasets.
+
+### The Solution
+
+Each project in this portfolio hand-crafts synthetic data with embedded telecom physics, then applies the appropriate ML paradigm end-to-end: from data generation through feature engineering, model training, evaluation, and business insight translation. Results are traceable and reproducible within each child repo.
 
 ## Projects
 
@@ -16,88 +40,31 @@
 | 2 | [Root Cause Analysis](https://github.com/adityonugrohoid/telecom-root-cause-analysis) | Multi-class Classification | XGBoost | `is_root_cause` | Acc@1: 0.91 |
 | 3 | [Anomaly Detection](https://github.com/adityonugrohoid/telecom-anomaly-detection) | Unsupervised | Isolation Forest | `label_anomaly` | F1: 0.70 |
 | 4 | [QoE Prediction](https://github.com/adityonugrohoid/telecom-qoe-prediction) | Regression | LightGBM | `mos_score` | RMSE: 0.45 |
-| 5 | [Capacity Forecasting](https://github.com/adityonugrohoid/telecom-capacity-forecasting) | Time-Series | LightGBM+Prophet | `traffic_load_gb` | MAPE: 14.5% |
+| 5 | [Capacity Forecasting](https://github.com/adityonugrohoid/telecom-capacity-forecasting) | Time-Series | LightGBM + Prophet | `traffic_load_gb` | MAPE: 14.5% |
 | 6 | [Network Optimization](https://github.com/adityonugrohoid/telecom-network-optimization) | Reinforcement Learning | Q-Learning | KPI improvement | +61% vs random |
 
----
-
-## What This Portfolio Demonstrates
-
-- **Domain Expertise**: Deep understanding of telecom network operations and challenges
-- **Problem Framing**: Translating business problems into well-defined ML tasks
-- **Data Engineering**: Hand-crafted synthetic data generators with embedded telecom physics
-- **End-to-End Thinking**: Data generation, feature engineering, modeling, evaluation, and business insights
-- **Communication**: Clear documentation for both technical and business audiences
-
----
-
-## Technology Stack
-
-| Category | Tools |
-|:---|:---|
-| Language | Python 3.11+ |
-| Package Manager | [uv](https://github.com/astral-sh/uv) |
-| ML Frameworks | XGBoost, LightGBM, scikit-learn |
-| Data Processing | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn |
-| Interpretability | SHAP |
-| Testing | pytest |
-| Linting | Ruff |
-| CI/CD | GitHub Actions |
-
----
-
-## Quick Start
-
-Each project is fully independent. To explore one:
-
-```bash
-cd 01-churn-prediction
-uv sync
-uv run python -m churn_prediction.data_generator
-uv run jupyter lab notebooks/
-```
-
-See each project's `QUICKSTART.md` for detailed instructions.
-
----
+Each project is self-contained with its own dependencies, notebooks, and quickstart guide.
 
 ## Project Structure
 
-Every project follows the same structure:
+This repo is an index. All source code, notebooks, and tests live in the six child repos linked above.
 
-```
-0X-project-name/
-├── .github/workflows/ci.yml    # CI pipeline
-├── data/
-│   ├── raw/                    # Generated synthetic data
-│   └── processed/              # Feature-engineered datasets
-├── src/{package_name}/
-│   ├── __init__.py             # Package exports
-│   ├── config.py               # Configuration management
-│   ├── data_generator.py       # Domain-informed data generation
-│   ├── features.py             # Feature engineering pipeline
-│   └── models.py               # ML model implementations
-├── notebooks/
-│   └── 0X_analysis.ipynb       # Main analysis notebook
-├── tests/
-│   └── test_data_quality.py    # Data quality tests
-├── .gitignore
-├── pyproject.toml
-├── README.md
-├── QUICKSTART.md
-└── CONTRIBUTING.md
-```
+## Related Projects
 
----
-
-## Author
-
-**Adityo Nugroho**
-Telecom Professional | AI/ML Practitioner
-
----
+| Project | Description |
+|---------|-------------|
+| [telecom-ml-framework](https://github.com/adityonugrohoid/telecom-ml-framework) | Spec-first ML project templates and domain-informed data generators for 6 telecom use cases |
+| [telecom-churn-prediction](https://github.com/adityonugrohoid/telecom-churn-prediction) | Binary classification predicting subscriber churn (XGBoost, AUROC 0.86) |
+| [telecom-root-cause-analysis](https://github.com/adityonugrohoid/telecom-root-cause-analysis) | Multi-class ranking of root causes in alarm cascades (XGBoost, Acc@1 0.91) |
+| [telecom-anomaly-detection](https://github.com/adityonugrohoid/telecom-anomaly-detection) | Unsupervised cell-level anomaly detection on KPI time-series (Isolation Forest, F1 0.70) |
+| [telecom-qoe-prediction](https://github.com/adityonugrohoid/telecom-qoe-prediction) | Session-level MOS regression from network KPIs (LightGBM, RMSE 0.45) |
+| [telecom-capacity-forecasting](https://github.com/adityonugrohoid/telecom-capacity-forecasting) | Hourly per-cell traffic forecasting (LightGBM, MAPE 14.5%) |
+| [telecom-network-optimization](https://github.com/adityonugrohoid/telecom-network-optimization) | RL-based RAN parameter tuning (Q-Learning, +61% vs random) |
 
 ## License
 
-All projects are MIT licensed for educational and portfolio purposes.
+This project is licensed under the [MIT License](LICENSE).
+
+## Author
+
+**Adityo Nugroho** ([@adityonugrohoid](https://github.com/adityonugrohoid))
