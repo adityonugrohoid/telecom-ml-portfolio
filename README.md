@@ -1,11 +1,11 @@
 <div align="center">
 
-# Telecom AI/ML Portfolio
+# Telecom ML Portfolio
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Six end-to-end ML projects covering churn, anomaly detection, QoE, forecasting, and network optimization in telecom**
+**Six end-to-end telecom ML projects: churn, anomaly detection, QoE, forecasting, and network optimization**
 
 [Projects](#projects) | [Related Projects](#related-projects)
 
